@@ -1,2 +1,5 @@
 # COMS4995-Open-Source-Dev
-This folder is for the class COMS4995 Open Source Development at Columbia
+
+
+This folder will provide a platform to illustrate the predicted sentiment score on given financial news with chosen stock tickers.
+

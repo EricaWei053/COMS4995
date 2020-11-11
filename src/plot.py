@@ -7,6 +7,7 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 
+
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server, external_stylesheets=external_stylesheets)

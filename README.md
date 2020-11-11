@@ -1,4 +1,4 @@
-# StockSentiment
+# NewsSentiment
 
 ![GitHub](https://img.shields.io/github/license/EricaWei053/COMS4995)
 ![Travis (.org) branch](https://img.shields.io/travis/EricaWei053/StockSentiment/master)

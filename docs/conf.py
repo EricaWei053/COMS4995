@@ -23,8 +23,7 @@ author = 'Erica Wei'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0.1'
-
-
+master_doc = "index"
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -61,4 +60,4 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 def setup(app):
     app.add_config_value('recommonmark_onfig', {'autho_toc_tree_section':'Contents'}, True)
-    app.add_tranform(AutoStructify)
+    app.add_transform(AutoStructify)

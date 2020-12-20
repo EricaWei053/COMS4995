@@ -1,3 +1,6 @@
+"""
+conf.py
+"""
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
@@ -57,6 +60,7 @@ html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Auto documentation
+
 
 def setup(app):
     app.add_config_value('recommonmark_onfig', {'autho_toc_tree_section':'Contents'}, True)

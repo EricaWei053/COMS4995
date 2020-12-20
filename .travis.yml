@@ -5,5 +5,4 @@ install:
   - pip install flake8
 # command to run tests
 script:
-  - python -m flake8 tests/
   - python -m pytest tests/

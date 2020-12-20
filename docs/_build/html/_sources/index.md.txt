@@ -1,9 +1,9 @@
 # DataSentiment
 
 ![GitHub](https://img.shields.io/github/license/EricaWei053/COMS4995)
-![Travis (.org) branch](https://img.shields.io/travis/EricaWei053/StockSentiment/master)
-![Codecov](https://img.shields.io/codecov/c/github/EricaWei053/StockSentiment)
-[![Read the Docs](https://img.shields.io/readthedocs/stocksentiment)](https://stocksentiment.readthedocs.io/en/latest/?)
+![Travis (.org) branch](https://travis-ci.org/EricaWei053/DataSentiment.svg?branch=master)
+![Codecov](https://img.shields.io/codecov/c/github/EricaWei053/DataSentiment)
+[![Read the Docs](https://readthedocs.org/projects/datasentiment/badge/?version=latest)](https://datasentiment.readthedocs.io/en/latest/?badge=latest)
 
 ## Description
 Sometimes the data analysis is a very time-consuming and dry process. 

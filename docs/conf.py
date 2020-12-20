@@ -17,7 +17,7 @@ from recommonmark.transform import AutoStructify
 import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
-project = 'stock-sentiment'
+project = 'data-sentiment'
 copyright = '2020, Erica Wei'
 author = 'Erica Wei'
 

@@ -10,3 +10,6 @@ script:
   - python -m pytest tests/
   - pylint **/*.py --disable=C0103 --exit-zero
   - bash <(curl -s https://codecov.io/bash) -t 28af5f56-2103-4917-ae3f-ab8f3988c014
+# auto-documentation
+  - cp README.md ./docs/index.md
+  - cd docs && make html

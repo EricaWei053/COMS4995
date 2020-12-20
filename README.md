@@ -5,7 +5,6 @@
 ![Codecov](https://img.shields.io/codecov/c/github/EricaWei053/DataSentiment)
 [![Read the Docs](https://readthedocs.org/projects/datasentiment/badge/?version=latest)](https://datasentiment.readthedocs.io/en/latest/?badge=latest)
 
-
 ## Description
 Sometimes the data analysis is a very time-consuming and dry process. 
 This platform provides an automatically statistic analysis results, cumulative return plot, 
@@ -13,6 +12,10 @@ histogram and 3D visualization for given time-series data. The data could be tic
 profit and loss(pnl) data. The input data reqiuremtns are two columns, one column is date, 
 another one is value depending on the date. 
  
+## Demo 
+
+![](demo.gif)
+
 
 ## Usage 
 Backend mainly in Python in processing file, data, calculating values. 

@@ -7,13 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to stock-sentiment’s documentation! &mdash; stock-sentiment 0.0.1 documentation</title>
+  <title>DataSentiment &mdash; data-sentiment 1.0.0 documentation</title>
   
 
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
+  
   
   
   
@@ -28,7 +29,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -48,7 +48,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> stock-sentiment
+            <a href="#" class="icon icon-home" alt="Documentation Home"> data-sentiment
           
 
           
@@ -81,11 +81,14 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to stock-sentiment’s documentation!</a><ul>
-<li><a class="reference internal" href="#this-is-a-first-header">This is a first header</a></li>
+<li><a class="reference internal" href="#">DataSentiment</a><ul>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#how-to-run-it">How to run it</a></li>
+<li><a class="reference internal" href="#disclaim">Disclaim:</a></li>
+<li><a class="reference internal" href="#optional-develop">Optional Develop:</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 </div>
             
@@ -101,7 +104,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">stock-sentiment</a>
+          <a href="#">data-sentiment</a>
         
       </nav>
 
@@ -132,7 +135,7 @@
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to stock-sentiment’s documentation!</li>
+      <li>DataSentiment</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -151,29 +154,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <p>.. stock-sentiment documentation master file, created by
-sphinx-quickstart on Thu Nov 12 15:49:24 2020.
-You can adapt this file completely to your liking, but it should at least
-contain the root <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive.</p>
-<div class="section" id="welcome-to-stock-sentiment-s-documentation">
-<h1>Welcome to stock-sentiment’s documentation!<a class="headerlink" href="#welcome-to-stock-sentiment-s-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="this-is-a-first-header">
-<h2>This is a first header<a class="headerlink" href="#this-is-a-first-header" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="datasentiment">
+<h1>DataSentiment<a class="headerlink" href="#datasentiment" title="Permalink to this headline">¶</a></h1>
+<p><img alt="GitHub" src="https://img.shields.io/github/license/EricaWei053/COMS4995" />
+<img alt="Travis (.org) branch" src="https://img.shields.io/travis/EricaWei053/StockSentiment/master" />
+<img alt="Codecov" src="https://img.shields.io/codecov/c/github/EricaWei053/StockSentiment" />
+<a class="reference external" href="https://stocksentiment.readthedocs.io/en/latest/?"><img alt="Read the Docs" src="https://img.shields.io/readthedocs/stocksentiment" /></a></p>
+<div class="section" id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes the data analysis is a very time-consuming and dry process.
+This platform provides an automatically statistic analysis results, cumulative return plot,
+histogram and 3D visualization for given time-series data. The data could be ticker price or
+profit and loss(pnl) data. The input data reqiuremtns are two columns, one column is date,
+another one is value depending on the date.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Backend mainly in Python in processing file, data, calculating values.
+Use Plotly Dash to illustrate the plotting and Analysis.</p>
 <ul class="simple">
-<li><p>These</p></li>
-<li><p>are</p></li>
-<li><p>some</p></li>
-<li><p>bullets</p></li>
+<li><p>Time-series data</p></li>
+<li><p>PnL or ticker price</p></li>
+<li><p>Statistic Analysis Table</p></li>
+<li><p>View plots with several choices</p></li>
 </ul>
 </div>
+<div class="section" id="how-to-run-it">
+<h2>How to run it<a class="headerlink" href="#how-to-run-it" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">req</span><span class="o">.</span><span class="n">txt</span> 
+</pre></div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>:ref:<code class="docutils literal notranslate"><span class="pre">genindex</span></code></p></li>
-<li><p>:ref:<code class="docutils literal notranslate"><span class="pre">modindex</span></code></p></li>
-<li><p>:ref:<code class="docutils literal notranslate"><span class="pre">search</span></code></p></li>
-</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">./</span><span class="n">src</span><span class="o">/</span><span class="n">plot</span><span class="o">.</span><span class="n">py</span> <span class="p">[</span><span class="n">file1</span><span class="p">]</span> <span class="p">[</span><span class="n">file2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>And then you can click the url link generated and viewing the contents.</p>
+<p>Please make sure the file is in csv format and
+you enter the full or absolute path for the current root.</p>
+</div>
+<div class="section" id="disclaim">
+<h2>Disclaim:<a class="headerlink" href="#disclaim" title="Permalink to this headline">¶</a></h2>
+<p>This app will try to make sure everything is calculating correctly, but it could be the case the data is dismatch and get insane results. If there’s anything wrong and could be improved, please add to issue and send PR.</p>
+</div>
+<div class="section" id="optional-develop">
+<h2>Optional Develop:<a class="headerlink" href="#optional-develop" title="Permalink to this headline">¶</a></h2>
+<p>Will add Deep Learning network for potential development feature.</p>
+</div>
 </div>
 
 

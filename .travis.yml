@@ -8,4 +8,4 @@ install:
 # command to run tests
 script:
   - python -m pytest tests/
-  - pylint **/*.py --disable=C0103
+  - pylint **/*.py --disable=C0103 --exit-zero

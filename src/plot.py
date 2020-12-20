@@ -1,26 +1,28 @@
-import flask
-import plotly.express as px
-import pandas as pd
+"""
+plot.py to view plots.
+"""
 import sys
 import dash
+import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
-import dash_bootstrap_components as dbc
-import plotly.express as px
 import dash_table as dt
+import flask
 import numpy as np
+import pandas as pd
+import plotly.express as px
 import plotly.graph_objects as go
+from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
 from werkzeug.middleware.dispatcher import DispatcherMiddleware
 from werkzeug.serving import run_simple
-from dash.dependencies import Input, Output
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 application = flask.Flask(__name__)
 
 # dash object
 dash_app = dash.Dash(__name__, server=application, external_stylesheets=[dbc.themes.BOOTSTRAP],
-                url_base_pathname='/dash_plots/')
+                     url_base_pathname='/dash_plots/')
 dash_app.validation_layout = True
 dash_app._layout = html.Div()
 # global variables for update dash dynamically depending on different user
@@ -88,7 +90,8 @@ def fig_update(file_path):
                                color = 'color', width=800, height=800, opacity=0.7)
 
         # Rolling sharpe ratio plot
-        pnl_df['rolling_SR'] = pnl_df.pnl.rolling(60).apply(lambda x: (x.mean() - 0.02) / x.std(), raw=True)
+        pnl_df['rolling_SR'] = pnl_df.pnl.rolling(60).apply(
+            lambda x: (x.mean() - 0.02) / x.std(), raw=True)
 
         pnl_df.fillna(0, inplace=True)
         sr_df = pnl_df[pnl_df['rolling_SR'] > 0]
@@ -223,7 +226,8 @@ def new_plot():
     Input('backtest_result', 'value'))
 def update_graph(backtest_fp):
     """
-    Dash callback function for update graphs depending on the chosen backtest file from dropdown bar.
+    Dash callback function for update graphs depending
+    on the chosen backtest file from dropdown bar.
     :param backtest_fp:
     :return:
     """
@@ -289,7 +293,8 @@ def update_graph(backtest_fp):
 def get_plot(file_paths):
     """
     Get two dictionaries, one mapping from strategy id to strategy name,
-    another is mapping from strategy id to strategy location. Update the global variables for OptionList and pnl_paths.
+    another is mapping from strategy id to strategy location.
+    Update the global variables for OptionList and pnl_paths.
     :param file_paths: a list of file paths.
     :return: None
     """

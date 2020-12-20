@@ -58,6 +58,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # Auto documentation
 
+
 def setup(app):
     app.add_config_value('recommonmark_onfig', {'autho_toc_tree_section':'Contents'}, True)
     app.add_transform(AutoStructify)

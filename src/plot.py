@@ -24,10 +24,10 @@ application = flask.Flask(__name__)
 dash_app = dash.Dash(__name__, server=application, external_stylesheets=[dbc.themes.BOOTSTRAP],
                      url_base_pathname='/dash_plots/')
 dash_app.validation_layout = True
-dash_app._layout = html.Div()
+dash_app.layout = html.Div()
 # global variables for update dash dynamically depending on different user
-OptionList = []
-pnl_paths = []
+OPTION_LIST = []
+PNL_PATHS = []
 TOTAL_CAPITAL = 10 ** 4
 
 
@@ -132,18 +132,22 @@ def fig_update(file_path):
 
 
 def new_plot():
+    """
+    Gives structure of plots.
+    :return: html div
+    """
 
     content_style = {
         "margin-left": "32rem",
         "margin-right": "2rem",
         "padding": "2rem 1rem",
     }
-    global OptionList
+    # global option_list
 
     contents = html.Div([
         html.Div(dcc.Dropdown(
             id='backtest_result',
-            options=OptionList,
+            options=OPTION_LIST,
             placeholder="Select Backtest Result        ",
             style=dict(
                 width='200%',
@@ -286,8 +290,7 @@ def update_graph(backtest_fp):
         )
         return pnl_fig, fig_3d, sr_rolling, pnl_hist, table_comp
 
-    else:
-        raise PreventUpdate
+    raise PreventUpdate
 
 
 def get_plot(file_paths):
@@ -308,10 +311,10 @@ def get_plot(file_paths):
 
         file_names[idx] = file_name
         id_paths[idx] = file_path
-        global OptionList
-        global pnl_paths
-        OptionList = [{'label': v, 'value': id_paths[k]} for k, v in file_names.items()]
-        pnl_paths = [id_paths[k] for k in file_names.keys()]
+        global OPTION_LIST
+        global PNL_PATHS
+        OPTION_LIST = [{'label': v, 'value': id_paths[k]} for k, v in file_names.items()]
+        PNL_PATHS = [id_paths[k] for k in file_names.keys()]
 
 
 def pnl_summary(data):
